@@ -4,12 +4,11 @@ import Image from 'next/image';
 import { Input } from '@/components/ui/input';
 import { useEffect, useState } from 'react';
 import { formUrlQuery } from '@/sanity/utils';
-import { usePathname, useSearchParams, useRouter } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 
 const SearchForm = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const pathname = usePathname();
   const [search, setSearch] = useState('');
 
   useEffect(() => {
